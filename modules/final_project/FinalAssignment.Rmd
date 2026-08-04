@@ -9,11 +9,11 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Final Details
+# Final Assignment Details
 
 ### Purpose
 
-The goal of this final assignment is to assess your ability to integrate the many skills you have learned over the semester: filtering and summarizing data, creating new columns, choosing the appropriate data visualizations, and performing and interpreting the appropriate statistical tests.
+The goal of this final assignment is to assess your ability to integrate the many skills you have learned over the semester: filtering and summarizing data, choosing the appropriate data visualizations, and performing and interpreting the appropriate statistical tests.
 
 ### Task
 
@@ -21,77 +21,31 @@ Write R code which produces the correct data, summaries, plots and analyses. Cor
 
 ### Criteria for Success
 
--   Code chunks run without errors
--   Code produces the correct result
-    -   Code that produces the correct answer will receive **full** credit
-    -   Code attempts with logical direction will receive **partial** credit
--   Appropriate plot types are used to visualize the data
--   Appropriate statistical tests are used to analyze the data
--   Written answers address the questions in sufficient detail
+- Code chunks run without errors
+- Code produces the correct result
+  - Code that produces the correct answer will receive **full** credit
+  - Code attempts with logical direction will receive **partial** credit
+- Appropriate plot types are used to visualize the data
+- Appropriate statistical tests are used to analyze the data
+- Written answers address the questions in sufficient detail
 
 ### Due Date
 
-Dec 11 at midnight MST
-
-------------------------------------------------------------------------
-
-For your final this semester, I am presenting you with 3 problem sets, totaling up to 60 points.
-
-I'm expecting you to be able to filter and summarize the data in the ways you need, choose the appropriate visualization, choose the appropriate analysis, and correctly interpret the analysis for the question I've asked you.
-
-It is important to note that I will not be giving you an answer key for this final project since a major part of your grade for the assignment is being able to choose the appropriate visualizations and analyses for the question and the data.
-
-We are going to use the `palmerpenguins` R package and data set, which we've used many times before! You can learn more about it [here](https://allisonhorst.github.io/palmerpenguins/). This is a real data set from a Long-Term Ecological Research (LTER) site in Antarctica.
-
-## Set-Up
-
-#### Be sure to run both of these code chunks before you begin!
-
-I've gone ahead and included the code to load the two packages you will need to successfully complete this project: the `tidyverse` and `palmerpenguins`. Be sure to run this code chunk!
-
-```{r message = FALSE}
-library(tidyverse)
-library(palmerpenguins)
-```
-
-#### Important!
-
-I've also included one more code chunk below. Be sure to run this code chunk, as well! It does two key things:
-
--   first, it adds the `penguins` data frame to your environment, which I imagine you will find helpful
--   second, it removes all rows that have any NA values, which will make completing this assignment a bit easier.
-
-Once you've run this line of code, you should see the `penguins` data frame pop up in your environment with 333 observations (rows) and 8 variables (columns).
-
-```{r}
-penguins <- penguins %>% drop_na()
-```
-
-![](lter_penguins.png){width="50%"}
+May 12 at midnight MST
 
 ------------------------------------------------------------------------
 
 ## Structure & Guidelines
 
-Like the practice version, this final is structured as 3 different problem sets. For each problem set, I am presenting you with an initial question to guide your thinking and analysis.
-
-### Data
-
-Assume that nothing carries over between problem sets.
-
-Each problem set is stand-alone, meaning that you should always start with the `penguins` data frame at the beginning of each problem set. If you should use a data frame that you created *within* the problem set, I explicitly state so.
-
-For example, in Problem Set 1, you should use the `biscoe` data frame that you create for the entire problem set; at the start of Problem Set 2, start over with the `penguins` data frame.
-
 ### Interpreting Statistical Results
 
-When I ask you to interpret statistical results, you should roughly follow these guidelines.
+When I ask you to interpret statistical results, you should roughly follow these guidelines:
 
--   the cut-off for our p-values is always 0.05 ($\alpha = 0.05$)
--   report the p-value that we are focused on in that question
--   if there are multiple p-values of interest, report all of them
--   state whether the p-value indicates a significant difference/relationship
--   if applicable, state whether we should or should not reject the null hypothesis
+- the cut-off for our p-values is always 0.05 ($\alpha = 0.05$)
+- report the p-value that we are focused on in that question
+- if there are multiple p-values of interest, report all of them
+- state whether the p-value indicates a significant difference/relationship
+- if applicable, state whether we should or should not reject the null hypothesis
 
 ### Plotting
 
@@ -99,275 +53,292 @@ All plots should be made using `ggplot2`.
 
 Your options for plot types to choose from are:
 
--   [multiple]{.underline} histogram plots
-    -   use transparency (`alpha`)
-    -   use `position = "identity"` with multiple groups to see the full distributions
--   [multiple]{.underline} density plots
-    -   use transparency (`alpha`) with multiple groups to see the full distributions
--   box-and-whisker plot
-    -   add points on top of the box plot to show the distribution of the points
--   scatter plot
-    -   add the linear model to every scatter plot
+- histogram
+- [multiple]{.underline} histogram plot
+  - use transparency (`alpha`)
+  - use `position = "identity"` with multiple groups to see the full distributions
+- box-and-whisker plot
+  - add points on top of the box plot to show the distribution of the points
+- scatter plot
+  - add the linear model to every scatter plot
 
-**Note: All plots should have modified axis labels and legend labels.**
-
-In many cases, this might mean capitalizing the axis label and/or legend label. In other cases, you might want to put units in parentheses after the words (e.g., Body Mass (g)).
+| **NOTE! All plots should have modified axis labels and legend labels.**
+| In many cases, this might mean capitalizing the axis label and/or legend label. In other cases, you might want to put units in parentheses after the words (e.g., Body Mass (g)).
 
 ### Generative AI Guidelines
 
-While I do not recommend using generative AI to complete this assignment (throughout the semester, I've seen it cause more problems than not...), you are allowed to use it on the final.
+While I do not recommend using generative AI to complete this assignment (throughout the semester, I've seen it cause more problems than not...), you are *technically* allowed to use it on the final.
 
 However, you *must* do so according to the guidelines I've set out for all other assignments this semester.
 
-You can find clear examples of these guidelines on D2L in *Resources \> Helpful Info \> Assignment Reminders*.
+| **CAUTION!** If you do use generative AI without following the course guidelines, you will receive a 0 for this final and you will not have the option to resubmit. Proceed wisely.
 
-#### CAUTION!
-
-If you do use generative AI without following the course guidelines, you will receive a 0 for this final and you will not have the option to resubmit. Proceed wisely.
+You can find clear examples of these guidelines on D2L in *Syllabus \> Assignment Reminders*.
 
 ------------------------------------------------------------------------
 
 # Let's Begin!
 
--   Have you run the 2 code chunks in the "Set-Up" section?
--   Have you read through the "Structure & Guidelines" section?
+Have you *actually* read through the "Structure & Guidelines" section above?
 
 If so, proceed! If not, scroll back up...
 
-## Problem Set 1 (30 points total)
+## Set-Up (5 points)
 
-This problem set has 2 parts.
+1.  First, we need to load the `tidyverse` package. (2 points)
 
-### Part 1 (20 points)
+```{r}
 
-#### Question: Is there a significant relationship between bill length and bill depth for penguins on Biscoe Island?
+```
 
-For this problem set, we are going to use data from Biscoe island only.
+2.  As a reminder, there are 4 datasets that you can use to complete this final assignment:
 
-1.  Create a new data frame called `biscoe` that includes only penguins from Biscoe island. This new data frame should have 163 rows. (2 points)
+    - krill data from KrillBase -\> `krill.csv`
+    - fur seal pups on Maiviken Island -\> `fur_seals.csv`
+    - Gentoo penguins from Bird Island -\> `gentoos_and_temps.csv`
+    - Chinstrap penguins from Signy Island -\> `chinstraps_on_signy.csv`
 
-    ```{r}
+Which dataset have you chosen to work with for this final assignment? (1 point)
 
-    ```
+*Answer*:
 
-You will want to use the `biscoe` data set for the rest of Problem Set #1 (Parts 1 and 2).
+3.  Bring your chosen data into R to work with using the `read_csv` function. Remember to save it as an object. (2 points)
 
-This is a scenario where there is no clear independent and dependent variable. Go ahead and treat **bill length as the independent variable (x-axis) and bill depth as the dependent variable (y-axis).**
+```{r}
 
-2.  Determine whether bill length and bill depth are continuous or categorical (1 point)
+```
 
-    -   **bill depth**: dependent
-    -   **bill length**: independent
+## Understanding the Data (12 points)
 
-3.  Write the correct pair of statistical hypotheses for our question. (2 points)
+4.  Use a function (e.g., `head()` or `str()`) to look at your data. (3 points)
 
-    **Null**:
+```{r}
 
-    **Alternative**:
+```
 
-4.  Plot the relationship between bill length and bill depth using the appropriate plot type. (3 points)
+5.  In 1-2 sentences, explain what the output from Question 4 is telling you about your dataset. The more detail, the better. (3 points)
 
-    -   Be sure to add a line of best fit
-    -   Ensure that the plot has clear labels on the axes (follow the Structure & Guidelines).
-    -   Remember, we are ignoring species for now.
+*Answer*:
 
-    ```{r}
+### Data Exploration
 
-    ```
+Now, spend some time really getting to know your dataset. Information about the datasets can be found below, both in terms of how you should treat each column (numeric vs. categorical) as well as at the links to the datasets below (click on the names of the datasets).
 
-5.  Describe the relationship that you see in the plot you just made. Is the relationship positive, negative, or nonexistent? How do you know? (2 points)
+You might notice that the data at the links has many more columns than the datasets you have been given or some slightly different data. Focus only on the columns that are in the .csv file provided to you for this assignment.
 
-    *Answer:*
+#### [Krill](https://www.bas.ac.uk/project/krillbase/#data)
 
-6.  Calculate the correlation coefficient, `r`. What does this value tell us? (2 points)
+- You will want to use the `Krill_per_1m2_log` column as your dependent variable. This is a log-transformed version of the `Krill_per_1m2` column. You don't need to worry about *why* we transformed the data, but this column should be a bit easier to work with.
+- The `Date`, `Year`, and `Month` columns should all be treated as *numeric* variables.
+- While the `Station` column can *technically* be considered a categorical variable, please use the `Day_Night` column as your categorical variable for this assignment and for your research question.
 
-    ```{r}
+#### [Fur Seals](https://ramadda.data.bas.ac.uk/repository/entry/show?entryid=bc6d802a-fce5-495d-b5e1-bb26f824847c)
 
-    ```
+- If you choose to use the `Date` or `Year` column, treat them as *numeric* variables.
+- On the other hand, if you use the `Month` column, treat it as a *categorical* variable.
 
-    *Answer:*
+#### [Gentoo Penguins](https://ramadda.data.bas.ac.uk/repository/entry/show?entryid=1fd5bc8a-96b5-4f53-aa15-33e5330e7705)
 
-7.  Calculate the `r^2` value. Remember, this number is typically expressed as a percent (x 100). What is this value telling us? (2 points)
+- If you are using the `Year` column, treat it as a *numeric* variable.
+- The dataset has a column for the previous year's December temperature. Because counts of chicks took place in January or February (and nests were counted in October/November), the number of chicks is most likely to be related to the temperatures directly after chicks hatched (December of the previous year).
 
-    ```{r}
+#### [Chinstrap Penguins](https://ramadda.data.bas.ac.uk/repository/entry/show?entryid=d784af69-c92b-444c-a12e-ee0361802cb1)
 
-    ```
+- I do not recommend using the `MONTH` or `DAY` column.
+- If you use the `YEAR` column, treat it as a *numeric* variable.
 
-    *Answer:*
+### Back to Assignment Questions
 
-8.  Let's see if there is a significant relationship between bill length and bill depth. Perform the correct statistical analysis (1 point) and interpret the results. (6 points total)
+6.  Based on your own general knowledge, the information at the links above, and the additional information I've provided, list out the columns (only those in the .csv file) in your chosen dataset and give a brief description (just a phrase is fine) of what the data in each columns represents. (3 points)
 
-    ```{r}
+*Answer*:
 
-    ```
+7.  For each of the columns in your dataset, identify whether the data points they contain are categorical or numeric. Be sure your answers align with the information I've provided for you above. (3 points)
 
-    -   What is the equation of the line of best fit? Use both variable names and values from the statistical analysis. (2 point)
-    -   What is the p-value? (1 point)
-    -   Is there a significant relationship? (1 point)
-    -   What should we do with the null hypothesis (reject or fail to reject)? (1 point)
+    Many of your answers to subsequent questions will depend heavily on whether variables are categorical or numeric.
 
-    *Answer*:
+    Type out the name of the column and then the descriptor. For example:
 
-### Part 2 (10 points)
+    - island_name: categorical
+    - island_size_km: numeric
 
-When we look at the plot of the data, it looks like there might be two different groups in the data. Let's see what happens when we add in species to this analysis. Keep using the `biscoe` dataframe.
+*Answer*:
 
-9.  Make the color of the points and the linear models differ by species on Biscoe Island. Be sure to adjust *all* labels on the plot accordingly. (3 points)
+## Building a Research Question (6 points)
 
-    ```{r}
+In order to write a successful research question, we need to identify our dependent variable and the independent variable that we think affects the dependent variable.
 
-    ```
+8.  First, determine which variable is the *dependent* variable in your dataset (there is usually only one, but there might be two). It must be numeric. (2 points)
 
-10. Run the appropriate statistical test, adding species (and the interaction between the two independent variables) into the model. (2 points)
+*Answer*:
 
-    ```{r}
+9.  Next, choose 1 independent variable from your dataset (each dataset has more than one from which to choose). (2 points)
 
-    ```
+    This should be a variable that you believe might affect the values of the dependent variable. It can be either categorical or numeric.
 
-11. Interpret the results of the test above. Is species significant? Is there a significant interaction between bill length and species? (2 points)
+*Answer*:
+
+10. Now, bring your dependent and independent variables together to form a research question based on the structure presented in class in Module 2 (also see Module 2 Assignment 3). (2 points)
+
+*Answer*:
+
+## Summarizing Our Data (6 points)
+
+Let's get to know our data a little better.
+
+11. Summarize your data by calculating at least 1 measure of central tendency and 1 measure of variability for your your *dependent* variable using the `tidyverse` functions (you might need `na.rm = TRUE`!). (4 points)
+
+Pay close attention here! How you summarize will differ based on whether your *independent* variable is categorical or numeric (2 points):
+
+- If your research question has a *categorical* independent variable, find the measure of central tendency and the measure of variability for the dependent variable in *each* individual category of the independent variable.
+- If your research question has a *numeric* independent variable, find a measure of central tendency and the measure of variability for the independent variable in addition to the dependent variable
+
+```{r}
+
+
+```
+
+## Data Visualization (18 points)
+
+To continue our data exploration, we are going to plot our data.
+
+| **IMPORTANT NOTES**:
+| - At least ONE of the plots should include both your dependent and independent variable. Think critically about which plot that should be based on your variable types.
+| - Also, at least one plot will need to use a variable that is NOT in your research question.
+
+12. Produce a histogram plot (just one, not multiple on the same plot) of the dependent variable. Write 1-2 sentences describing what information you can gather from plot. (3 points)
+
+```{r warning=FALSE}
+
+```
 
 *Answer:*
 
-12. Based on the plots, the linear relationships, and the linear models, write 2-3 sentences discussing if and/or how adding species into our linear model changes our interpretation of the data. Did the type of relationship change? Did significance levels change? Do the two linear models tell us different things? (3 points)
+13. Create a *multiple histogram* plot of your dependent variable and one other variable (this may or may not be your independent variable). Make sure we can see each histogram plot. (3 points)
+
+```{r warning=FALSE}
+
+```
+
+14. Create a *box-and-whisker* plot which includes your dependent variable. Changing the color of the boxes is optional. Make sure to add points to the plot. (3 points)
+
+    *Hint: if your plot has `NA` values that you want to remove, you can optionally remove them from the dataset with the `filter` function and the argument `!is.na(column_name)`.*
+
+```{r warning=FALSE}
+
+```
+
+15. Create a *scatter plot* that includes your dependent variable. Write 1-2 sentences describing what information you can gather from plot. (3 points)
+
+    *Hint: if your plot has `NA` values that you want to remove, you can remove them from the dataset with the `filter` function and the argument `!is.na(column_name)`.*
+
+```{r warning=FALSE}
+
+```
+
+16. Identify which plot(s) from Questions 15-17 match up with your research question. How you know it matches up correctly (based on categorical vs. numeric variables)? (3 point)
+
+*Answer*:
+
+17. In 2-3 sentences, interpret the plot(s) that you identified in the previous question. What does it tell you about your chosen research question? (3 points)
+
+*Answer*:
+
+## Running Your Statistical Model (15 points)
+
+In this course, we have covered 3 different statistical analyses: t-tests, ANOVAs, and linear regression.
+
+It is now time to decide how to apply these statistical analyses to your own research question!
+
+18. Based on everything you know about your independent and dependent variables and the requirements for each of the statistical analyses we covered in the course, determine which statistical analysis you should perform to answer your question. In 1-2 sentence, explain why. (3 points)
+
+*Answer*:
+
+19. Perform the appropriate statistical analysis below. If necessary, add an additional line of code to print out the results. (3 points)
+
+    *Hint: if your dataset has `NA` values that you need to remove, you can remove them from the dataset with the `filter` function and the argument `!is.na(column_name)`.*
+
+```{r}
+
+```
+
+20. If necessary, run a pairwise comparison. If a pairwise comparison is NOT necessary for your statistical analysis, explain why not. (3 points)
+
+*Answer*:
+
+```{r}
+# space for code to run a pairwise comparison if needed
+```
+
+21. Interpret the results of your statistical analysis (including the pairwise comparison, if relevant). In your answer, include the p-value and if the result of your analysis is significant. (3 points)
+
+*Answer*:
+
+22. What do these results mean in the context of your research question? (3 points)
+
+*Answer*:
+
+## Expanding Our Horizons (6 points)
+
+23. Spend some time thinking about the outcome of your research question. Is the outcome what you were expecting or not? Why or why not? What additional information would you like to have to add context to your results? Your answer should be 4-5 sentences. (3 points)
 
 *Answer:*
 
-------------------------------------------------------------------------
+24. Think about your research subjects in the context of ecosystem services. What type of ecosystem services might the study of your research question fall under? (You might have to get a little creative here). Explain your rationale. (3 points)
 
-## Problem Set 2 (15 points)
+*Answer*:
 
-#### Question: Is there a difference in the average flipper length between male and female Chinstrap penguins?
+## Literature Search (6 points)
 
-1.  Our first step is to create a new data frame that includes only Chinstrap penguins. Call this new data frame `chinstrap`. (1 point)
+When we ask a research question, we always want to find out what other people have already found out about that question to give us an idea of what outcome we might expect.
 
-    ```{r}
+In Module 4 Assignment 1, you were asked to find at least 3 articles that related to your research question.
 
-    ```
+The articles you find don't have to be *exactly* related but should be relevant, as you will be using them at the end of this assignment to help interpret your statistical output.
 
-We will be using the `chinstrap` data frame for the rest of this problem set.
+25. Write the citation for your first article. Then, in *your own words*, write a 1-2 sentence summary of what the article is about, based on the title and the abstract. (2 points)
 
-2.  Let's summarize our data. Calculate one measure of central tendency and one measure of variability of the flipper length column for *each* sex: male and female. Save this dataframe as `chinstrap_summary`. (2 points)
+*Article 1 Citation*:
 
-    ```{r}
+*Article 1 Description*:
 
-    ```
+26. Do the same as above for the second article. (2 points)
 
-3.  What if we wanted our summary data in centimeters instead of millimeters? We can achieve this in 2 steps.
+*Article 2 Citation*:
 
-    a.  First, create a function called `mm_to_cm` that will convert a number from millimeters to centimeters. There are 10 millimeters in a centimeter. (1 point)
+*Article 2 Description*:
 
-    ```{r}
+27. Do the same as above for the last article. (2 points)
 
-    ```
+*Article 3 Citation*:
 
-    b.  Now, using the same code from question 3 above, add one line of code (in the correct location) that uses your newly created `mm_to_cm` function to create a new column in the dataframe. Make sure to edit the arguments in summary functions accordingly, as well. The result should be the same data frame that you produced in question 3 but with the summary values in cm instead of mm. (1 point)\
-        *Hint: if you're feeling confused about how to do this, check out the key for Module 4 Assignment 3*.
+*Article 3 Description*:
 
-    ```{r}
+## Communicating Your Results (6 points)
 
-    ```
+When researchers have come to some type of conclusion about a research question they have asked, we usually write up our findings in a scientific article to share our results with the scientific community and beyond.
 
-Ok, we have summarized the flipper length data for our two groups!
+Just like the articles you found in the Literature Search section, most articles have an abstract that gives any potential reader some information about the topic of the research paper and the conclusions the researchers have drawn.
 
-Let's get back to the `chinstrap` dataframe (not the summary dataframe) and keep working.
+Now that you have completed the process of coming up with a research question and finding some results, we want to communicate these results through writing an abstract. Feel free to look at your scientific articles for inspiration.
 
-4.  Determine which variable is *dependent* and which is *independent*. Also determine if each variable is *continuous* or *categorical*. (1 point)
-    -   **flipper length**:
-    -   **species**:
+28. Your abstract should be structured in the following manner, with at least one sentence for each topic (6 sentence minimum):
 
-Let's plot the flipper length data for each sex.
+- An opening sentence about the general topic of your question and/or dataset
+- General information about your dataset
+- The research question your have chosen to ask
+- What your data summary *and* visualization shows you
+- What statistical analysis you performed and its outcome
+- **Your final interpretation of your research question**: does your independent variable impact your dependent variable and, if so, in what way?
 
-5.  Choose an appropriate plot for the data. Be sure to adjust the x- and y-axis labels appropriately. (2 points)
+Be sure you include information from at least 2 of your 3 articles from your literature search somewhere in your abstract! Use in-text citations (e.g., Golding & Anderson, 2024; Bledsoe et al., 2024) to show where you do so.
 
-    ```{r}
-
-    ```
-
-6.  Write the pair of statistical hypotheses for our question. (1 point)
-
-    **Null**:
-
-    **Alternative**:
-
-7.  Perform the appropriate analysis to compare the flipper lengths of male and female chinstrap penguins. (2 points)
-
-    ```{r}
-
-    ```
-
-8.  Interpret the results of this test. (2 points)
-
-    -   what is the p-value?
-    -   is there a significant difference?
-    -   should we reject the null hypothesis?
-
-    *Answer:*
-
-9.  Should we run pairwise comparisons? If no, explain why not. If yes, do so and interpret the results. (2 points)
-
-    *Answer:*
-
-    ```{r}
-
-    ```
-
-------------------------------------------------------------------------
-
-## Problem Set 3 (15 points)
-
-#### Question: **Are there differences in the average bill length across the islands in the data set? (Ignore species)**
-
-Let's start by summarizing the bill length data.
-
-1.  Calculate a measure of central tendency and measure of variability for the bill length for *each* island. (2 points)
-
-    ```{r}
-
-    ```
-
-2.  Which of our variables would be considered *independent* and which one *dependent*? Also determine whether each is *continuous* or *categorical*. (2 points)
-
-    -   **island**:
-    -   **bill length**:
-
-Now that we have an idea numerically of the differences between the islands, let's plot the differences.
-
-3.  Choose an appropriate plot. Ensure that you follow the plotting guidelines in the Structure & Guidelines section above! (2 points)
-
-    ```{r}
-
-    ```
-
-4.  Write the correct pair of statistical hypotheses for our question. (2 points)
-
-    **Null**:
-
-    **Alternative**:
-
-5.  Run the appropriate statistical analysis for our question. (2 points)
-
-    ```{r}
-
-    ```
-
-6.  Interpret the results of this test. (3 points)
-
-    -   what is the p-value?
-    -   is there a significant difference?
-    -   should we reject the null hypothesis?
-
-    *Answer:*
-
-7.  Should we run pairwise comparisons? If no, explain why not. If yes, do so and interpret the results. (2 points)
-
-    *Answer:*
-
-    ```{r}
-
-    ```
+*Abstract*:
 
 ------------------------------------------------------------------------
 
 ## The End!
 
-Great work, and thanks for a wonderful semester!
+Take a look back at everything you just did! You've come a *very* long way since the beginning of the semester and should be quite proud of that.
+
+Great work, and thanks for a great semester!

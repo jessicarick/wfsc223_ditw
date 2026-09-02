@@ -1,6 +1,6 @@
 # WFSC223
 
-Working repository for Ellen Bledsoe's version of _WFSC 223: Dealing with Data in the Wild_ at the University of Arizona. This repo is constantly changing as materials are updated each semester.
+Working repository for Jessi Rick's copy of Ellen Bledsoe's version of _WFSC 223: Dealing with Data in the Wild_ at the University of Arizona. This repo is constantly changing as materials are updated each semester.
 
 In each module folder, you will find _assignments_, _data_, _lessons_, and _scripts_:
 -    _assets_: some previous materials that I didn’t want deleted but I do not use

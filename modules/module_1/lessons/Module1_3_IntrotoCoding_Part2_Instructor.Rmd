@@ -1,0 +1,134 @@
+---
+title: 'Module 1: Intro to Coding in R, Part 2'
+author: "Jessica Rick"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction to Coding, Part 2
+
+## Learning Outcomes
+
+-   Students will understand how 1-dimensional data differs from 2-dimensional data in R.
+-   Students will know how to subset data frames in two different ways.
+
+## 2-Dimensional Data: Data Frames
+
+Most of the data you will encounter is two-dimensional (i.e., it has columns and rows). Its structure resembles a spreadsheet. R is really good with these types of data. We call these 2D object [data frames]{.underline}.
+
+-   **rows** go side-to-side
+-   **columns** go up-and-down
+
+Columns typically represent variables (a factor, trait, or condition) we are interested in.
+
+Rows represent observations. Each row will be one set of observations.
+
+![](row_column.png)
+
+Data frames are made up of multiple vectors. Each vector becomes a column.
+
+```{r}
+# Create a simple data frame from scratch
+plants <- data.frame(height = c(55, 17, 42, 47, 68, 39, 51, 23),
+                     nitrogen = c("Y", "N", "N", "Y", "Y", "N", "Y", "N"))
+
+plants
+```
+
+## Subsetting Data Frames
+
+Because data frames are two-dimensional, we can subset the data in a data frame by selecting specific columns, specific rows, or both!
+
+R *always* takes information for the row first, then the column.
+
+Just like with vectors, we can subset data frames by index or by condition using square brackets.
+
+The pattern is `dataframe[rows, columns]`.
+
+### Subsetting by Index
+
+```{r}
+# Sub-setting data frames
+# 2-dimensional, so you need to specify row and then column
+# plants[3] # doesn't work
+
+# row then column
+plants[4,1]
+plants[,2]
+```
+
+Another way to pull out a single column from a data frame is with the `$` operator. This can really come in handy when you know the name of the column but not the position.
+
+```{r}
+plants$height
+```
+
+Regardless of how you specify the column, you can put that code inside of a function, such as the `mean()`.
+
+```{r}
+mean(plants$height)
+```
+
+### Subsetting by Condition
+
+This is a simple data set, but we can use it to ask a question.
+
+Example: Are the heights of plants treated with nitrogen different from those not treated?
+
+First, we will need to keep only the plants that were treated with nitrogen.
+
+```{r}
+# filter rows based on values in the nitrogen column
+plants[plants$nitrogen == "Y", ]
+
+# calculate the mean
+mean(plants[plants$nitrogen == "Y", 1])
+```
+
+We can create a new data frame by saving the subset data frame to a new object.
+
+```{r}
+plants_no_nitrogen <- plants[plants$nitrogen == "N", ]
+```
+
+### Small Group Challenge (5 min)
+
+As a group, find the standard deviation (`sd()`) of the height of plants treated with nitrogen and those not treated with nitrogen. Which group has the larger standard deviation? Any ideas what that means?
+
+```{r}
+sd(plants[plants$nitrogen == "Y", 1])
+sd(plants[plants$nitrogen == "N", 1])
+```
+
+## Helpful Functions
+
+Below are some functions that I often find very helpful when working with vectors and data frames:
+
+-   `str()`: shows the structure of the object (e.g., rows and columns)
+-   `head()` and `tail()`: shows the first six and last six rows, respectfully
+-   `length()`: counts the number of elements in an object
+-   `ncol()` and `nrow()`: counts the number of columns or rows, respectfully
+-   `names()`: shows the names of the columns in a data frame
+-   `unique()`: shows one of each element in an object (removes duplicate values)
+
+```{r}
+str(plants) # structure of the object
+
+head(plants) # first 6 values or rows
+head(plants, n = 4) # first n values or rows
+tail(plants, n = 4) # last n values or rows
+
+length(plants)  # for a dataframe, number of columns
+length(plants$height) # for a column, number of rows
+
+ncol(plants)  # number of columns
+nrow(plants)  # number of rows
+
+names(plants) # list of column or object names
+
+unique(plants$nitrogen) # one of each value present in the column, duplicates removed
+```

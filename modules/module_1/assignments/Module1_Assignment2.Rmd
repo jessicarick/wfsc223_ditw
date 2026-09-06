@@ -1,6 +1,6 @@
 ---
 title: "Module 1, Assignment 2: Getting to Know the Team"
-author: "Ellen Bledsoe"     # <- your name here, inside the quotation marks!
+author: "Jessica Rick"     # <- your name here, inside the quotation marks!
 date: "`r Sys.Date()`"      # <- no need to change
 output: pdf_document
 ---
@@ -21,17 +21,21 @@ Write R code to successfully answer each question below.
 
 ### Criteria for Success
 
+Written answers need to address the questions in sufficient detail. Code will be assessed as follows:
+
 -   Code is within the provided code chunks
+
 -   Code chunks run without errors
--   Code will be assessed as follows:
+
 -   Code produces the correct result
-    -   Code that produces the correct answer will receive full credit
-    -   Code attempts with logical direction will receive partial credit
--   Written answers address the questions in sufficient detail
+
+-   Code that produces the correct answer will receive full credit
+
+-   Code attempts with logical direction will receive partial credit
 
 ### Due Date
 
-Thursday, Feb 5 by start of class
+Tuesday, September 15 by start of class (9:30am)
 
 # Assignment Questions
 
@@ -70,9 +74,9 @@ counts <- c(2, 9, 4, 3, 6, 7, 1, 0, 3)
 
 Now that we've practiced with vectors, let's move on to 2-dimensional data.
 
-Remember those questions about our trip to Antarctica from the survey you completed the first week of classes? It's time to play around with that data!
+Remember those questions about our trip to Antarctica from the survey you completed the first week of classes? It's time to play around with those data!
 
-The following code chunk will read the data into RStudio. Be sure to run it before try to answer the questions! A bunch of stuff will pop up, but it should work just fine.
+The following code chunk will read the data into RStudio. Be sure to run it before you try to answer the questions! A bunch of stuff will pop up, but it should work just fine.
 
 Once you run the code, you will see a data frame called `team_data` show up in the environment.
 
@@ -81,16 +85,17 @@ team_data <- read.csv("team_antarctica.csv")
 ```
 
 4.  Take a look at the data and answer the following questions (0.5 points each).
+
     a.  What are the dimensions of the data (how many rows and how many columns)?
     b.  Name a column that has *categorical* data.
     c.  Name a column that has *numeric* data.
     d.  Name a column that has data that could be treated as either *categorical* or *numeric*.
 
-*Answer*:
+    *Answer*:
 
 5.  Take a look at the data frame using the `head()` function. Typically, `head()` provides the first 6 rows of data.
 
-    Modify one of the arguments in `head()` so that the line of code prints the first 10 rows. (If you aren't sure how to do that, remember how you can look for help about functions!)
+    Modify one of the arguments in `head()` so that the line of code prints the first 10 rows instead. (If you aren't sure how to do that, remember how you can look for help about functions!)
 
 ```{r}
 
@@ -144,7 +149,7 @@ What animal should be on our team flag?
 
 *Answer:*
 
-```{r flag_mascot}
+```{r}
 
 ```
 
@@ -157,4 +162,4 @@ Follow these steps to successfully turn in your assignment on D2L.
 3.  To download the PDF from Posit Cloud, click the empty box to the left of the PDF file in the Files tab.
 4.  Click on the blue gear near the top of the `Files` panel and choose Export.
 5.  Put your last name at the front of the file name when prompted, then click the Download button. The PDF file of your assignment is now in your "Downloads" folder on your device.
-6.  Head over to D2L and navigate to Module 1 Assignment 2. Submit the PDF file that you just downloaded.
+6.  Head over to D2L and navigate to **Module 1 Assignment 2**. Submit the PDF file that you just downloaded.

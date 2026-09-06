@@ -1,6 +1,6 @@
 ---
 title: "Module 1, Assignment 2: Getting to Know the Team"
-author: "Ellen Bledsoe"     # <- your name here, inside quotation marks
+author: "Jessica Rick"     # <- your name here, inside quotation marks
 date: "`r Sys.Date()`"      # <- uses the current date when rendered
 output: pdf_document
 ---
@@ -54,7 +54,7 @@ counts[2]
 
 2.  Subset the `counts` vector using a condition (not index) that returns values from the vector that are greater than 5.
 
-```{r}
+```{r counts}
 counts[counts > 5]
 ```
 
@@ -87,7 +87,7 @@ team_data <- read.csv("../data/team_antarctica.csv")
     c.  Name a column that has *numeric* data.
     d.  Name a column that has data that could be treated as either *categorical* or *numeric*.
 
-*Answer:*
+*Answer:* (a) 34 rows x 10 columns; (b) `team` or `parka_color` or `team_flag` (c) `distance_mi`, but also `cooking_skill`, `fishing_skill`, `swimming`, or `remote_location`; (d) any listed in c except `distance_mi`
 
 5.  Take a look at the data frame using the `head()` function. Typically, `head()` provides the first 6 rows of data.
 
@@ -99,7 +99,7 @@ head(team_data, 10)
 
 6.  Using what you know about sub-setting data frames, write a line of code the pulls out the parka color for Unique ID 4. (Hint: count the columns!)
 
-```{r parka7}
+```{r parka4}
 team_data[4, 8]
 ```
 

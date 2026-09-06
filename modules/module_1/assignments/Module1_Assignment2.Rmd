@@ -35,7 +35,7 @@ Written answers need to address the questions in sufficient detail. Code will be
 
 ### Due Date
 
-Tuesday, September 15 by start of class (9:30am)
+Tuesday, September 15 at start of class (9:30 am MST)
 
 # Assignment Questions
 
@@ -121,7 +121,7 @@ When we have a large data set like this, it is often helpful to summarize the da
 
 ```
 
-9.  Subset using a condition to return the rows of data only for people who rated their fishing skills as a 5. Retain all of the columns in those rows. (Hint: numbers do not need quotation marks around them).
+9.  Subset using a condition to return the rows of data only for people who rated their cooking skills as a 5. Retain all of the columns in those rows. (Hint: numbers do not need quotation marks around them).
 
 ```{r}
 

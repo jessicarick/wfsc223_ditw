@@ -1,35 +1,30 @@
 ﻿team,cooking_skill,fishing_skill,swimming,cold_tolerance,working_with_animals,remote_location,parka_color,team_flag,distance_mi
-University of Arizona,5,1,Yes,3,TRUE,1,Black,Leopard Seal,8800.00
-University of Arizona,1,2,No,4,TRUE,3,Black,Orca,8275.00
-University of Arizona,4,3,Yes,4,TRUE,4,Black,Leopard Seal,8791.00
-University of Arizona,3,1,Yes,4,TRUE,4,Blue,Leopard Seal,8218.69
-University of Arizona,1,1,Yes,1,TRUE,3,Black,Leopard Seal,8000.00
-University of Arizona,3,1,Yes,4,TRUE,2,White,Emperor Penguin,9000.00
-University of Arizona,5,3,Yes,3,TRUE,2,Blue,Orca,9000.00
-University of Arizona,1,1,Yes,3,TRUE,3,Orange,Emperor Penguin,8223.00
-University of Arizona,5,3,Yes,4,TRUE,3,Black,Orca,8243.00
-University of Arizona,3,1,Yes,4,TRUE,3,Orange,Emperor Penguin,10000.00
-University of Arizona,3,1,I can dog paddle,2,TRUE,3,Orange,Emperor Penguin,10000.00
-University of Arizona,4,3,Yes,3,TRUE,5,Orange,Leopard Seal,8757.00
-University of Arizona,3,3,Yes,4,TRUE,2,Blue,Emperor Penguin,8774.00
-University of Arizona,4,2,Yes,2,TRUE,3,Red,Leopard Seal,9000.00
-University of Arizona,3,3,Yes,4,TRUE,4,White,Orca,10000.00
-University of Arizona,3,5,Yes,5,TRUE,4,Red,Leopard Seal,10000.00
-University of Arizona,3,2,Yes,3,TRUE,1,Black,Leopard Seal,9000.00
-University of Arizona,4,5,Yes,5,TRUE,4,White,Leopard Seal,10000.00
-University of Arizona,4,3,Yes,2,TRUE,3,White,Emperor Penguin,8356.00
-University of Arizona,3,1,Yes,4,TRUE,3,Black,Emperor Penguin,8444.30
-University of Arizona,3,3,Yes,2,TRUE,4,Blue,Leopard Seal,8529.00
-University of Arizona,4,2,Yes,2,TRUE,4,Orange,Leopard Seal,8356.00
-University of Arizona,3,1,Yes,4,TRUE,5,Black,Leopard Seal,9000.00
-University of Arizona,3,1,Yes,4,TRUE,5,Blue,Leopard Seal,8279.00
-University of Arizona,5,3,Yes,4,TRUE,5,Orange,Sea Spider,9000.00
-University of Arizona,2,1,Yes,2,TRUE,2,Black,Emperor Penguin,8872.00
-University of Arizona,3,1,I can dog paddle,3,TRUE,4,Black,Emperor Penguin,9000.00
-University of Arizona,4,1,Yes,3,TRUE,4,Black,Emperor Penguin,8791.00
-University of Arizona,4,3,Yes,3,TRUE,5,Blue,Leopard Seal,9143.00
-University of Arizona,3,1,Yes,4,TRUE,3,Blue,Orca,8270.00
-University of Arizona,4,1,Yes,3,TRUE,3,Black,Emperor Penguin,11000.00
-University of Arizona,4,3,Yes,3,TRUE,3,Black,Emperor Penguin,11000.00
-University of Arizona,3,2,Yes,2,TRUE,4,Blue,Leopard Seal,9000.00
-University of Arizona,4,2,Yes,3,TRUE,3,Orange,Sea Spider,8355.00
+University of Arizona,2,4,2,3,TRUE,3,Red,Leopard seal,8265.1
+University of Arizona,3,1,5,4,TRUE,3,Green,Sea spider,8280.7
+University of Arizona,4,1,5,5,TRUE,1,Black,Leopard seal,8760.5
+University of Arizona,4,3,3,3,TRUE,1,Blue,Orca,9627
+University of Arizona,4,2,5,4,TRUE,5,Orange,Sea spider,8281
+University of Arizona,2,1,5,2,TRUE,4,Red,Orca,8347
+University of Arizona,2,1,3,3,TRUE,2,Blue,Orca,9140
+University of Arizona,3,1,1,2,TRUE,4,Green,Antarctic toothfish,8269.8
+University of Arizona,4,2,4,3,TRUE,3,Blue,Orca,8280
+University of Arizona,3,1,3,4,TRUE,2,Black,Leopard seal,8363.7
+University of Arizona,4,3,5,2,TRUE,4,Green,Leopard seal,8291
+University of Arizona,4,1,3,3,TRUE,3,Blue,Orca,8282.8
+University of Arizona,5,3,3,5,TRUE,4,Green,Leopard seal,8760
+University of Arizona,5,1,5,4,TRUE,5,Red,Emperor penguin,9219.3
+University of Arizona,4,1,3,4,TRUE,2,Blue,Emperor penguin,8352
+University of Arizona,3,2,4,2,TRUE,3,Black,Emperor penguin,9456
+University of Arizona,2,3,5,2,TRUE,4,Red,Emperor penguin,8400
+University of Arizona,1,3,4,3,TRUE,3,Black,Emperor penguin,8486.6 
+University of Arizona,3,3,4,3,TRUE,2,Blue,Emperor penguin,8283.2
+University of Arizona,4,3,3,4,TRUE,3,Black,Orca,8760
+University of Arizona,3,1,3,2,TRUE,3,Blue,Orca,9582 
+University of Arizona,3,4,3,4,TRUE,3,Orange,Emperor penguin,8760
+University of Arizona,2,2,4,5,FALSE,3,Blue,Emperor penguin,14429
+University of Arizona,4,4,5,2,TRUE,1,Black,Sea spider,8760.5
+University of Arizona,4,2,3,4,FALSE,2,Green,Emperor penguin,7500
+University of Arizona,5,1,3,1,TRUE,1,Black,Sea spider,9137
+University of Arizona,3,4,4,4,TRUE,3,Blue,Orca,7220
+University of Arizona,3,2,4,4,TRUE,3,White,Emperor penguin,8760
+University of Arizona,1,1,5,5,TRUE,3,Red,Orca,300

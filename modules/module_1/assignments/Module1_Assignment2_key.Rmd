@@ -28,7 +28,7 @@ Write R code to successfully answer each question below.
 
 ### Due Date
 
-Thursday, Sept 11 at 9:30 am MST
+Tuesday, September 15 at 9:30 am MST
 
 # Assignment Questions
 
@@ -121,10 +121,10 @@ min(team_data$distance_mi)
 max(team_data$distance_mi)
 ```
 
-9.  Subset using a condition to return the rows of data only for people who rated their fishing skills as a 5. Retain all of the columns in those rows. (Hint: numbers do not need quotation marks around them).
+9.  Subset using a condition to return the rows of data only for people who rated their cooking skills as a 5. Retain all of the columns in those rows. (Hint: numbers do not need quotation marks around them).
 
 ```{r cooking_skill}
-team_data[team_data$fishing_skill == 5, ]
+team_data[team_data$cooking_skill == 5, ]
 ```
 
 10. Calculate the average cold tolerance of people who want blue parkas. Use these steps to think through how to answer this question.
@@ -145,7 +145,7 @@ What animal should be on our team flag?
 
 First, create a vector called `mascot` that has only the values from the `team_flag` column. Next, use the `table()` function on the `mascot`. This will give you the number of times each option was chosen. According to the results, which animal should be on our team flag?
 
-*Answer:* Leopard seal
+*Answer:* Emperor penguin
 
 ```{r flag_mascot}
 # data frame

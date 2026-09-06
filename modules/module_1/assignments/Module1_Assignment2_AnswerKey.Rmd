@@ -69,7 +69,7 @@ max(team_data$distance_mi)
 9.  
 
 ```{r cooking_skill}
-team_data[team_data$fishing_skill == 5, ]
+team_data[team_data$cooking_skill == 5, ]
 ```
 
 10. 
